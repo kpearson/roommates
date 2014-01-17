@@ -1,6 +1,7 @@
-<h1>Welcome to Kit's Roommates app</h1>
-<p>Here you can pay rent, send money to eachother, Update the shopping list, and send group messeges.</p>
+<div class="hero-unit">
+<h1>Welcome to Vignes 305</h1>
 
-<p>If you are new to the loft click here to Sign up.</p>
-
-<p>Other wise click here to Sing in.</p>
+	<p>If you are new to the loft please <br> <%= link_to "Sign Up", new_user_path, class: "btn btn-primary" %></p>
+	<p> Othwise <br><%= link_to "Sign In", new_session_path, class: "btn btn-primary" %></p>
+</div>
+<p>Here you can send money to eachother, create and share lists, and send text messeges.</p>
