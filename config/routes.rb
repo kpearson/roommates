@@ -2,10 +2,14 @@ Roommates::Application.routes.draw do
   root 'home#index'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  # post 'twilio/voice' => 'twilio#voice'
+  post 'twilio/voice' => 'twilio#voice'
   get 'twilio/voice' => 'twilio#voice'
+  get 'twilio/text' => 'twilio#text'
 
-  
+  get 'home/message' => 'home#message'
+  get 'home/money' => 'home#money'
+  get 'home/lists' => 'home#lists'
+
   resources :home
   # resources :twilio
   resources :users
