@@ -20,7 +20,7 @@ class TwilioController < ApplicationController
   		client.account.messages.create(
   			:from => "(818) 926-4291",
   			:to   => u.phone_number,
-  			:body => "Test message."
+  			:body => "Hello #{u.name} this is a test of the emergency test Kit"
   			)
   	end
   	redirect_to users_path
