@@ -1,0 +1,11 @@
+<h2><% if current_user.id == @user.id %>
+			<%= "Hello" %> 
+		<% end %>
+		<%= @user.name.capitalize %> </h2>
+<p> <% if current_user.id == @user.id %>
+	 	  <%= link_to "Up date your info", "users/edit" %>
+	  <% end %>
+<p> <%= @user.phone_number %> </p>
+<p> <%= @user.email %> </p>
+<br>
+<br>
