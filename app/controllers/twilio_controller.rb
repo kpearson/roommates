@@ -16,12 +16,12 @@ class TwilioController < ApplicationController
 	end
 
   def text
-  	send_all = User.all.each do |u|
+  	User.where(:id => params[:receivers]).each do |u|
   		client.account.messages.create(
-  			:from => "(818) 926-4291",
+  			:from => "(818) 926-4291", # phone number REQUIRED by twilio API
   			:to   => u.phone_number,
-  			:body => "Hello #{u.name} this is a test of the emergency test Kit"
-  			)
+  			:body => params[:message]
+  		)
   	end
   	redirect_to users_path
   end

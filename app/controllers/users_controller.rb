@@ -2,9 +2,11 @@ class UsersController < ApplicationController
 	# before_filter :require_login
 
 	def index
+		redirect_to "/"
 	end
 
 	def show
+		@current_user = current_user
 		@user = User.find(params[:id])
 	end
 

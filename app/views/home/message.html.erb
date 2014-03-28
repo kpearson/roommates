@@ -1,8 +1,20 @@
 <h1>Messages Page</h1>
 Who would you like to reachout to?
 <br>
-<form action=
 
-<% @users.each do |n| %>
-	<%=	n.name %>
+	<%= form_tag twilio_text_path do %>
+	  <div class="field">
+	  	<table class='table table-striped'>
+	  	<% @users.each do |user| %>
+	  		<tr>
+	  			<td style="width:15px"><%= check_box_tag 'receivers[]', user.id %></td>
+	  			<td><%= user.name %></td>
+	  	  </tr>
+	  	<% end %>
+	    </table>
+	    <%= label_tag :message %><br />
+	    <%= text_area_tag :message, params[:message] %>
+	    <%= csrf_meta_tag %>
+	  </div>
+	  <div class="actions"><%= submit_tag "Submit" %></div>
 	<% end %>

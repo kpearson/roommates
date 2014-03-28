@@ -4,7 +4,7 @@ Roommates::Application.routes.draw do
 
   post 'twilio/voice' => 'twilio#voice'
   get 'twilio/voice' => 'twilio#voice'
-  get 'twilio/text' => 'twilio#text'
+  post 'twilio/text' => 'twilio#text', as: :twilio_text
 
   get 'home/message' => 'home#message'
   get 'home/money' => 'home#money'

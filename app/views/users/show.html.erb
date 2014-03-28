@@ -1,8 +1,3 @@
-<h2> Hello <%= @user.name.capitalize %> </h2>
-<p> <% if current_user.id == @user.id %>
-	 	  <%= link_to "Up date your info", edit_user_path %>
-	  <% end %>
-<p> <%= @user.phone_number %> </p>
-<p> <%= @user.email %> </p>
-<br>
-<br>
+<div class="hero-unit">
+<%= render "show" %>
+</div>
