@@ -1,3 +1,5 @@
 <h1> Up Date Your Info </h1>
 
 <%= render 'form' %>
+
+<%= link_to "delete", @user, method: :delete, data: { confirm: "You sure?" } %>

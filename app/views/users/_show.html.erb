@@ -3,7 +3,7 @@
 		<% end %>
 		<%= @user.name.capitalize %> </h2>
 <p> <% if current_user.id == @user.id %>
-	 	  <%= link_to "Up date your info", "users/edit" %>
+	 	  <%= link_to "Up date your info", edit_user_path(current_user) %>
 	  <% end %>
 <p> <%= @user.phone_number %> </p>
 <p> <%= @user.email %> </p>
