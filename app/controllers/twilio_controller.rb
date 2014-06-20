@@ -20,7 +20,7 @@ class TwilioController < ApplicationController
       @body = (params[:message]) << "\n    - #{roommates.name} " "#{roommates.phone_number}"
   		client.account.messages.create(
   			:from => "(818) 926-4291", # phone number REQUIRED by twilio API
-  			:to   => u.phone_number,
+  			:to   => roommates.phone_number,
   			:body => @body
   		)
   	end
