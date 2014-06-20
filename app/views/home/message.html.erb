@@ -1,4 +1,4 @@
-<h1>Messages Page</h1>
+<h1>Messages</h1>
 Who would you like to reachout to?
 <br>
 
@@ -7,8 +7,7 @@ Who would you like to reachout to?
 	  	<table class='table table-striped'>
 	  	<% @users.each do |user| %>
 	  		<tr>
-	  			<td style="width:15px"><%= check_box_tag 'receivers[]', user.id %></td>
-	  			<td><%= user.name %></td>
+	  			<td style="width:15px"><%= check_box_tag 'receivers[]', user.id %>  <%= user.name %></td>
 	  	  </tr>
 	  	<% end %>
 	    </table>
